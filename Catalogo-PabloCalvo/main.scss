@@ -1,0 +1,18 @@
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/main-content";
+@import "./layout/sidebar";
+@import "./base/variables";
+@import "./components/buttons";
+@import "./components/cards";
+@import "./views/catalog";
+@import "./views/register";
+
+.layout-grid {
+    display: grid;
+    height: 100vh;
+
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+

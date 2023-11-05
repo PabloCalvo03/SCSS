@@ -8,11 +8,15 @@
 @import "./views/catalog";
 @import "./views/register";
 
+body{
+    margin: 0;
+}
+
 .layout-grid {
     display: grid;
     height: 100vh;
 
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: 230px 1fr;
+    grid-template-rows: 105px 1fr 100px;
 }
 

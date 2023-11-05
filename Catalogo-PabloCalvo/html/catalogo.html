@@ -1,29 +1,71 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../main.css">
-    <title>Catalogo de jabones</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../main.css" />
+    <title>SOAPP</title>
+  </head>
+  <body>
     <div class="layout-grid">
-        <header class="header-container">
-            <div class="header-container-up">
-                <img class="imagen-logo" src="../layout/img/imagen_logo.png" alt="Logo de la tienda">
-                <div class="nombre-tienda">FRAGANCIART</div>
+      <header class="header-container">
+        <div class="header-container-up">
+          <img
+            class="image-logo"
+            src="../layout/img/imagen_logo.png"
+            alt="Logo de la tienda"
+          />
+          <!-- Se ve en pantallas mayores a 800px-->
+          <nav class="navigation">
+            <div><a href="#">Novedades</a></div>
+            <div><a href="#">Colecciones</a></div>
+            <div><a href="#">Ofertas</a></div>
+            <div><a href="#">Contacto</a></div>
+            <div><a href="#">Ayuda</a></div>
+          </nav>
+          <!-- Se ve en pantallas menores a 800px-->
+          <img class="hamburger-menu" src="../layout/img/menu_hamburguesa.svg" alt="Menu hamburguesa">
+          <div class="header-options">
+            <a href="#"><div class="language-selector">ES</div></a>
+            <a href="#"><img class="shopping-cart" src="../layout/img/imagen_carrito.svg" alt="Carrito de la compra"></a>
+            <a href="#"><img class="finder" src="../layout/img/imagen_lupa.svg" alt="Buscar"></a>
+          </div>
+        </div>
+        <div class="header-container-down">
+          <div class="scrolling-text-container">
+            <!-- Pongo muchos ya que esto se hace con JavaScript y quiero que se llegue a ver el efecto -->
+            <div class="scrolling-text">
+              ¡Actualmente estamos realizando una oferta! ¡Obtén hasta un 30% de
+              descuento en todos los jabones! ¡Échale un vistazo! 🎉 · ¡Actualmente estamos realizando una oferta! ¡Obtén hasta un 30% de
+              descuento en todos los jabones! ¡Échale un vistazo! 🎉 · ¡Actualmente estamos realizando una oferta! ¡Obtén hasta un 30% de
+              descuento en todos los jabones! ¡Échale un vistazo! 🎉 · ¡Actualmente estamos realizando una oferta! ¡Obtén hasta un 30% de
+              descuento en todos los jabones! ¡Échale un vistazo! 🎉 · ¡Actualmente estamos realizando una oferta! ¡Obtén hasta un 30% de
+              descuento en todos los jabones! ¡Échale un vistazo! 🎉 · ¡Actualmente estamos realizando una oferta! ¡Obtén hasta un 30% de
+              descuento en todos los jabones! ¡Échale un vistazo! 🎉 · ¡Actualmente estamos realizando una oferta! ¡Obtén hasta un 30% de
+              descuento en todos los jabones! ¡Échale un vistazo! 🎉
             </div>
-            <nav>
-                <a href="#">Novedades</a>
-                <a href="#">Colecciones</a>
-                <a href="#">Jabones especiales</a>
-                <a href="#">Ofertas</a>
-                <a href="#">Contacto</a>
-            </nav>
-        </header>
-        <div class="sidebar-container"></div>
-        <div class="main-content-container"></div>
-        <div class="footer-container"></div>
+          </div>
+        </div>
+      </header>
+      <div class="sidebar-container">
+        <div class="sidebar-categorys-and-filters">
+          <h1>Categorias</h1>
+          <div>Jabones naturales
+            <input type="checkbox" name="jabones-naturales">
+          </div>
+          <div>Jabones veganos
+            <input type="checkbox" name="jabones-veganos">
+          </div>
+          <div>Jabones de glicerina
+            <input type="checkbox" name="jabones-glicerina">
+          </div>
+          <div>Jabones para pieles sensibles
+            <input type="checkbox" name="jabones-pieles-sensibles">
+          </div>
+        </div>
+      </div>
+      <div class="main-content-container"></div>
+      <div class="footer-container"></div>
     </div>
-</body>
+  </body>
 </html>

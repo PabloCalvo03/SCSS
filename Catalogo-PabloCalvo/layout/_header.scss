@@ -1,54 +1,114 @@
-.header-container{
+@import "../base/variables";
+
+.header-container {
     display: flex;
     flex-direction: column;
-    background-color: #ffcaaf;
-    width: 100%;
-    height: 100%;
     grid-column-start: 1;
-    grid-column-end: 7;
+    grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-    justify-content: space-between;;
-    align-items: center;
-}
-.header-container-up{
-    display: flex;
-    width: 100%;
-    height: 100%;
+    justify-content: space-between;
 
-    justify-content: space-around;;
-    align-items: center;
-}
-
-.imagen-logo{
-    width: 100px;
-    height: 100px;
-    padding: 20px;
-}
-
-nav{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    gap: 30px;
-    border-top: 3px solid #f38951;
-    & a {
-        text-decoration: none;
-        color: #f38951;
-        font-family: 'Exo 2', sans-serif;
-        font-weight: 600;
-        font-size: 1.5rem;
-        &:hover{
-            text-shadow: 1px 1px 2px black;
+    & .header-container-up {
+        display: flex;
+        background-color: $primary-bg-color;
+        height: 75%;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 1px 1px 28px -10px rgba(0,0,0,0.82);
+        -webkit-box-shadow: 1px 1px 28px -10px rgba(0,0,0,0.82);
+        -moz-box-shadow: 1px 1px 28px -10px rgba(0,0,0,0.82);
+    
+        @media (max-width: 800px) {
+            & .navigation {
+                display: none !important; // Añado el !important porque sino no se sobreescribe el display flex que tiene puesto 
+            }
         }
+
+        @media (min-width: 800px) {
+            & .hamburger-menu {
+                display: none !important; // Añado el !important porque sino no se sobreescribe el display flex que tiene puesto 
+            }
+        }
+    
+        & .image-logo {
+            width: $logo-size;
+            height: $logo-size;
+            padding: $spacing;
+        }
+    
+        & .navigation {
+            display: flex;
+            justify-content: center;
+            gap: $nav-gap;
+            height: 100%;
+            align-items: center;
+    
+            & a {
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $link-color;
+                font-family: $primary-font-family;
+                font-weight: 200;
+                font-size: $nav-font-size;
+    
+                &:hover {
+                    border-top: 3px solid $link-hover-color;
+                    border-bottom: 3px solid $link-hover-color;
+                }
+
+            }
+        }
+    
+        .header-options {
+            display: flex;
+            gap: $options-gap;
+            padding: $link-padding;
+    
+            & .language-selector {
+                font-family: $primary-font-family;
+                color: white;
+            }
+    
+            & a {
+                height: $link-height; /* Remove underline and adjust height */
+                text-decoration: none;
+    
+                & .shopping-cart, .finder {
+                    width: $icon-size;
+                    height: $icon-size;
+                }
+            }
+        }
+    }
+    
+    & .header-container-down {
+        display: flex;
+        align-items: center;
+        box-shadow: 1px 1px 28px -10px rgba(0,0,0,0.82);
+        -webkit-box-shadow: 1px 1px 28px -10px rgba(0,0,0,0.82);
+        -moz-box-shadow: 1px 1px 28px -10px rgba(0,0,0,0.82);
+        height: 25%;
+        overflow: hidden;
+        z-index: 1!important;
+    
+        & .scrolling-text-container {
+            font-family: $primary-font-family;
+            color: $text-color;
+            font-weight: 200;
+            white-space: nowrap;
+            animation: scrollLeftRight 40s linear infinite;
+        }
+    }
+    
+}
+
+@keyframes scrollLeftRight {
+    0%,100% {
+        transform: translateX(0%);
+    }
+    99% {
+        transform: translateX(-100%);
     }
 }
 
-.nombre-tienda{
-    color: white;
-    font-family: 'Exo 2', sans-serif;
-    font-weight: bold;
-    font-size: 1.5rem;
-    padding: 20px;
-    color: #f38951;
-}

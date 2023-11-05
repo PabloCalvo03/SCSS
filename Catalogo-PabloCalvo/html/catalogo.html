@@ -50,6 +50,7 @@
       <div class="sidebar-container">
         <div class="sidebar-categorys-and-filters">
           <h1>Categorias</h1>
+          <div class="sidebar-categorys">
           <div>Jabones naturales
             <input type="checkbox" name="jabones-naturales">
           </div>
@@ -61,6 +62,12 @@
           </div>
           <div>Jabones para pieles sensibles
             <input type="checkbox" name="jabones-pieles-sensibles">
+          </div>
+        </div>
+          <div class="filter-container">
+            <label for="price-filter">Filtrar por precio:</label>
+            <input type="range" name="price-filter" min="0" max="100" value="50">
+            <output for="price-filter" id="price-value">$50</output>
           </div>
         </div>
       </div>

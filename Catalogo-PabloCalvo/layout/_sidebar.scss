@@ -16,15 +16,21 @@
         font-family: $primary-font-family;
         color: rgb(93, 93, 93);
         gap: 15px;
+
         & h1{
             margin: 0px;
         }
-        & div {
+
+        & .sidebar-categorys{
+            padding-bottom: 7px;
+
+            & div {
             display: flex;
             justify-content: space-between;
             padding: 7px;
-            border-bottom: 1px solid rgb(93, 93, 93);
+            border-bottom: 1px solid rgb(93, 93, 93);}
         }
+        
     }
     @media(max-width: 600px){
         display: none;

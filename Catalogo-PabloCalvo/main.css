@@ -145,7 +145,10 @@
 .sidebar-container .sidebar-categorys-and-filters h1 {
   margin: 0px;
 }
-.sidebar-container .sidebar-categorys-and-filters div {
+.sidebar-container .sidebar-categorys-and-filters .sidebar-categorys {
+  padding-bottom: 7px;
+}
+.sidebar-container .sidebar-categorys-and-filters .sidebar-categorys div {
   display: flex;
   justify-content: space-between;
   padding: 7px;

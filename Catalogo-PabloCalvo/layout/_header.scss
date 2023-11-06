@@ -27,7 +27,7 @@
 
         @media (min-width: 800px) {
             & .hamburger-menu {
-                display: none !important; // Añado el !important porque sino no se sobreescribe el display flex que tiene puesto 
+                display: none !important; // Igual que el !important anterior
             }
         }
     
@@ -60,7 +60,7 @@
             }
         }
     
-        .header-options {
+        & .header-options {
             display: flex;
             gap: $options-gap;
             padding: $link-padding;
@@ -71,7 +71,7 @@
             }
     
             & a {
-                height: $link-height; /* Remove underline and adjust height */
+                height: $link-height;
                 text-decoration: none;
     
                 & .shopping-cart, .finder {

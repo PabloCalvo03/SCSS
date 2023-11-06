@@ -8,7 +8,6 @@
     grid-row-start: 1;
     grid-row-end: 2;
     justify-content: space-between;
-
     & .header-container-up {
         display: flex;
         background-color: $primary-bg-color;
@@ -16,34 +15,27 @@
         justify-content: space-between;
         align-items: center;
         box-shadow: 1px 1px 28px -10px rgba(0,0,0,0.82);
-        -webkit-box-shadow: 1px 1px 28px -10px rgba(0,0,0,0.82);
-        -moz-box-shadow: 1px 1px 28px -10px rgba(0,0,0,0.82);
-    
         @media (max-width: 800px) {
             & .navigation {
                 display: none !important; // Añado el !important porque sino no se sobreescribe el display flex que tiene puesto 
             }
         }
-
         @media (min-width: 800px) {
             & .hamburger-menu {
                 display: none !important; // Igual que el !important anterior
             }
         }
-    
         & .image-logo {
             width: $logo-size;
             height: $logo-size;
             padding: $spacing;
         }
-    
         & .navigation {
             display: flex;
             justify-content: center;
             gap: $nav-gap;
             height: 100%;
             align-items: center;
-    
             & a {
                 text-transform: uppercase;
                 text-decoration: none;
@@ -51,29 +43,25 @@
                 font-family: $primary-font-family;
                 font-weight: 200;
                 font-size: $nav-font-size;
-    
                 &:hover {
                     border-top: 3px solid $link-hover-color;
                     border-bottom: 3px solid $link-hover-color;
                 }
-
             }
         }
-    
         & .header-options {
             display: flex;
             gap: $options-gap;
             padding: $link-padding;
-    
-            & .language-selector {
-                font-family: $primary-font-family;
-                color: white;
-            }
-    
+            align-content: center;
             & a {
                 height: $link-height;
                 text-decoration: none;
-    
+                & .language-selector {
+                    font-family: $primary-font-family;
+                    color: white;
+                    border-bottom: 2px solid white;
+                }
                 & .shopping-cart, .finder {
                     width: $icon-size;
                     height: $icon-size;
@@ -81,28 +69,22 @@
             }
         }
     }
-    
     & .header-container-down {
         display: flex;
         align-items: center;
         box-shadow: 1px 1px 28px -10px rgba(0,0,0,0.82);
-        -webkit-box-shadow: 1px 1px 28px -10px rgba(0,0,0,0.82);
-        -moz-box-shadow: 1px 1px 28px -10px rgba(0,0,0,0.82);
         height: 25%;
         overflow: hidden;
         z-index: 1!important;
-    
         & .scrolling-text-container {
             font-family: $primary-font-family;
             color: $text-color;
             font-weight: 200;
             white-space: nowrap;
-            animation: scrollLeftRight 40s linear infinite;
+            animation: scrollLeftRight 60s linear infinite;
         }
     }
-    
 }
-
 @keyframes scrollLeftRight {
     0%,100% {
         transform: translateX(0%);

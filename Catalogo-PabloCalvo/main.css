@@ -15,8 +15,6 @@
   justify-content: space-between;
   align-items: center;
   box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
-  -webkit-box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
-  -moz-box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
 }
 @media (max-width: 800px) {
   .header-container .header-container-up .navigation {
@@ -56,14 +54,16 @@
   display: flex;
   gap: 20px;
   padding: 10px;
-}
-.header-container .header-container-up .header-options .language-selector {
-  font-family: "Exo 2", sans-serif;
-  color: white;
+  align-content: center;
 }
 .header-container .header-container-up .header-options a {
-  height: 22px;
+  height: 18.5px;
   text-decoration: none;
+}
+.header-container .header-container-up .header-options a .language-selector {
+  font-family: "Exo 2", sans-serif;
+  color: white;
+  border-bottom: 2px solid white;
 }
 .header-container .header-container-up .header-options a .shopping-cart, .header-container .header-container-up .header-options a .finder {
   width: 22px;
@@ -73,8 +73,6 @@
   display: flex;
   align-items: center;
   box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
-  -webkit-box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
-  -moz-box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
   height: 25%;
   overflow: hidden;
   z-index: 1 !important;
@@ -84,7 +82,7 @@
   color: gray;
   font-weight: 200;
   white-space: nowrap;
-  animation: scrollLeftRight 40s linear infinite;
+  animation: scrollLeftRight 60s linear infinite;
 }
 
 @keyframes scrollLeftRight {
@@ -105,9 +103,12 @@
   grid-row-start: 3;
   grid-row-end: 3;
   box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
-  -webkit-box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
-  -moz-box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
   justify-content: space-around;
+}
+@media (max-width: 600px) {
+  .footer-container {
+    height: 120%;
+  }
 }
 .footer-container .footer-cliente {
   font-family: "Exo 2", sans-serif;
@@ -141,11 +142,6 @@
 }
 
 .main-content-container {
-  display: grid;
-  justify-items: center;
-  align-content: center;
-  row-gap: 20px;
-  grid-template-columns: 1fr 1fr 1fr;
   background-color: gray;
   width: 100%;
   height: 100%;
@@ -154,10 +150,22 @@
   grid-row-start: 2;
   grid-row-end: 2;
   box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
-  -webkit-box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
-  -moz-box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
 }
-.main-content-container .jabon {
+.main-content-container h1 {
+  text-align: center;
+  background-color: white;
+  color: rgb(93, 93, 93);
+  font-family: "Exo 2", sans-serif;
+  box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
+}
+.main-content-container .main-content-grid {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  row-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.main-content-container .main-content-grid .jabon {
   min-width: 300px;
   width: 20%;
   height: 236px;
@@ -170,10 +178,8 @@
   font-family: "Exo 2", sans-serif;
   margin: 10px;
   box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
-  -webkit-box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
-  -moz-box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
 }
-.main-content-container .jabon button {
+.main-content-container .main-content-grid .jabon button {
   background-color: #263740;
   color: white;
   padding: 10px 20px;
@@ -186,29 +192,34 @@
   text-decoration: none;
   display: inline-block;
   transition: background-color 0.3s;
+  border: 3px solid #263740;
 }
-.main-content-container .jabon img {
+.main-content-container .main-content-grid .jabon button:active {
+  color: #263740;
+  background-color: white;
+}
+.main-content-container .main-content-grid .jabon img {
   width: 150px;
   height: 150px;
   border-radius: 20px;
 }
 @media (max-width: 600px) {
-  .main-content-container .jabon img {
+  .main-content-container .main-content-grid .jabon img {
     min-width: 100px;
     width: 10%;
   }
 }
-.main-content-container .jabon .precio::after {
+.main-content-container .main-content-grid .jabon .precio::after {
   content: "€";
 }
 @media (max-width: 600px) {
-  .main-content-container .jabon {
-    width: 190px;
-    min-width: 160px;
+  .main-content-container .main-content-grid .jabon {
+    width: 200px;
+    min-width: 170px;
   }
 }
 @media (max-width: 1024px) {
-  .main-content-container {
+  .main-content-container .main-content-grid {
     grid-template-columns: 1fr 1fr; /* 2 columnas en pantallas menores a 1024px */
   }
 }

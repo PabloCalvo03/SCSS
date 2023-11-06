@@ -10,10 +10,10 @@
     grid-row-start: 3;
     grid-row-end: 3;
     box-shadow: 1px 1px 28px -10px rgba(0,0,0,0.82);
-    -webkit-box-shadow: 1px 1px 28px -10px rgba(0,0,0,0.82);
-    -moz-box-shadow: 1px 1px 28px -10px rgba(0,0,0,0.82);
     justify-content: space-around;
-
+    @media(max-width:600px){
+        height: 120%;
+    }
     & .footer-cliente {
         font-family: $primary-font-family;
         padding: 10px;
@@ -24,7 +24,6 @@
             text-decoration: none;
         }
     }
-
     & .footer-company {
         font-family: $primary-font-family;
         color: white;
@@ -36,7 +35,6 @@
         }
 
     }
-
     & .footer-social-media {
         font-family: $primary-font-family;
         color: white;

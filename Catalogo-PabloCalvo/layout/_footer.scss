@@ -11,9 +11,6 @@
     grid-row-end: 3;
     box-shadow: 1px 1px 28px -10px rgba(0,0,0,0.82);
     justify-content: space-around;
-    @media(max-width:600px){
-        height: 120%;
-    }
     & .footer-cliente {
         font-family: $primary-font-family;
         padding: 10px;

@@ -69,6 +69,12 @@
   width: 22px;
   height: 22px;
 }
+.header-container .header-container-up .header-options a .shopping-cart:hover, .header-container .header-container-up .header-options a .finder:hover {
+  background-color: blue;
+}
+.header-container .header-container-up .header-options:hover {
+  background-color: blue;
+}
 .header-container .header-container-down {
   display: flex;
   align-items: center;
@@ -104,11 +110,6 @@
   grid-row-end: 3;
   box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
   justify-content: space-around;
-}
-@media (max-width: 600px) {
-  .footer-container {
-    height: 120%;
-  }
 }
 .footer-container .footer-cliente {
   font-family: "Exo 2", sans-serif;
@@ -167,7 +168,7 @@
 }
 .main-content-container .main-content-grid .jabon {
   min-width: 300px;
-  width: 20%;
+  width: 60%;
   height: 236px;
   background-color: white;
   display: flex;
@@ -176,7 +177,7 @@
   justify-content: space-around;
   border-radius: 20px;
   font-family: "Exo 2", sans-serif;
-  margin: 10px;
+  padding: 5px;
   box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
 }
 .main-content-container .main-content-grid .jabon button {
@@ -209,12 +210,12 @@
     width: 10%;
   }
 }
-.main-content-container .main-content-grid .jabon .precio::after {
+.main-content-container .main-content-grid .jabon .price::after {
   content: "€";
 }
 @media (max-width: 600px) {
   .main-content-container .main-content-grid .jabon {
-    width: 200px;
+    width: 10%;
     min-width: 170px;
   }
 }
@@ -263,6 +264,80 @@
   }
 }
 
+.catalog-h1 {
+  text-align: center;
+  background-color: white;
+  color: rgb(93, 93, 93);
+  font-family: "Exo 2", sans-serif;
+  box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
+}
+
+.catalog {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  row-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.catalog .jabon {
+  min-width: 300px;
+  width: 60%;
+  height: 236px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 20px;
+  font-family: "Exo 2", sans-serif;
+  padding: 5px;
+  box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
+}
+.catalog .jabon button {
+  background-color: #263740;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Exo 2", sans-serif;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s;
+  border: 3px solid #263740;
+}
+.catalog .jabon button:active {
+  color: #263740;
+  background-color: white;
+}
+.catalog .jabon img {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+}
+@media (max-width: 600px) {
+  .catalog .jabon img {
+    min-width: 100px;
+    width: 10%;
+  }
+}
+.catalog .jabon .price::after {
+  content: "€";
+}
+@media (max-width: 600px) {
+  .catalog .jabon {
+    width: 10%;
+    min-width: 170px;
+  }
+}
+@media (max-width: 1024px) {
+  .catalog {
+    grid-template-columns: 1fr 1fr; /* 2 columnas en pantallas menores a 1024px */
+  }
+}
+
 body {
   margin: 0;
 }
@@ -272,4 +347,9 @@ body {
   height: 100vh;
   grid-template-columns: 230px 1fr;
   grid-template-rows: 105px 1fr 150px;
+}
+@media (max-width: 600px) {
+  .layout-grid {
+    grid-template-rows: 105px 1fr 200px;
+  }
 }/*# sourceMappingURL=main.css.map */

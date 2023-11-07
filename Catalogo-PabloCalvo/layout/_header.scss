@@ -65,7 +65,13 @@
                 & .shopping-cart, .finder {
                     width: $icon-size;
                     height: $icon-size;
+                    &:hover{
+                        background-color: blue;
+                    }
                 }
+            }
+            &:hover{
+                background-color: blue;
             }
         }
     }

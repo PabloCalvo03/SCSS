@@ -1,0 +1,68 @@
+.catalog-h1{
+    text-align: center;
+    background-color: white;
+    color: rgb(93, 93, 93);;
+    font-family: $primary-font-family;
+    box-shadow: 1px 1px 28px -10px rgba(0,0,0,0.82);
+}
+.catalog{
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    row-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    & .jabon {
+        min-width: 300px;
+        width: 60%;
+        height: 236px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 20px;
+        font-family: $primary-font-family;
+        padding: 5px;
+        box-shadow: 1px 1px 28px -10px rgba(0,0,0,0.82);
+        & button{
+            background-color: #263740;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-family: $primary-font-family;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
+            border: 3px solid #263740;
+            &:active{
+                color: #263740;
+                background-color: white;
+            }
+        }
+        & img {
+            width: 150px;
+            height: 150px;
+            border-radius: 20px;
+            @media(max-width: 600px){
+                min-width: 100px;
+                width: 10%;
+            }
+        }
+        & .price {
+            &::after {
+                content: "€";
+            }
+        }
+        @media(max-width: 600px){
+            width: 10%;
+            min-width: 170px;
+        }
+    }
+    @media (max-width: 1024px) {
+        grid-template-columns: 1fr 1fr; /* 2 columnas en pantallas menores a 1024px */
+    }
+}

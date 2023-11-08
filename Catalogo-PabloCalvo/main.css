@@ -75,7 +75,6 @@
   box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
   height: 25%;
   overflow: hidden;
-  z-index: 1;
 }
 .header-container .header-container-down .scrolling-text-container {
   font-family: "Exo 2", sans-serif;
@@ -186,6 +185,114 @@
   }
 }
 
+.button-catalogo {
+  background-color: #263740;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Exo 2", sans-serif;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border: 3px solid #263740;
+}
+.button-catalogo:active {
+  color: #263740;
+  background-color: white;
+}
+
+.jabon {
+  min-width: 300px;
+  width: 60%;
+  height: 236px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 20px;
+  font-family: "Exo 2", sans-serif;
+  padding: 5px;
+  text-align: center;
+  box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
+}
+.jabon img {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+}
+@media (max-width: 600px) {
+  .jabon img {
+    min-width: 100px;
+    width: 10%;
+  }
+}
+.jabon .price::after {
+  content: "€";
+}
+@media (max-width: 600px) {
+  .jabon {
+    width: 10%;
+    min-width: 170px;
+  }
+}
+
+.jabon {
+  min-width: 300px;
+  width: 60%;
+  height: 236px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 20px;
+  font-family: "Exo 2", sans-serif;
+  padding: 5px;
+  text-align: center;
+  box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
+}
+.jabon img {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+}
+@media (max-width: 600px) {
+  .jabon img {
+    min-width: 100px;
+    width: 10%;
+  }
+}
+.jabon .price::after {
+  content: "€";
+}
+@media (max-width: 600px) {
+  .jabon {
+    width: 10%;
+    min-width: 170px;
+  }
+}
+
+.button-catalogo {
+  background-color: #263740;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Exo 2", sans-serif;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border: 3px solid #263740;
+}
+.button-catalogo:active {
+  color: #263740;
+  background-color: white;
+}
+
 .catalog-h1 {
   text-align: center;
   background-color: white;
@@ -199,58 +306,8 @@
   justify-items: center;
   align-content: center;
   row-gap: 20px;
+  gap: 10px;
   grid-template-columns: 1fr 1fr 1fr;
-}
-.catalog .jabon {
-  min-width: 300px;
-  width: 60%;
-  height: 236px;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  border-radius: 20px;
-  font-family: "Exo 2", sans-serif;
-  padding: 5px;
-  box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
-}
-.catalog .jabon button {
-  background-color: #263740;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-family: "Exo 2", sans-serif;
-  cursor: pointer;
-  font-size: 16px;
-  text-align: center;
-  text-decoration: none;
-  border: 3px solid #263740;
-}
-.catalog .jabon button:active {
-  color: #263740;
-  background-color: white;
-}
-.catalog .jabon img {
-  width: 150px;
-  height: 150px;
-  border-radius: 20px;
-}
-@media (max-width: 600px) {
-  .catalog .jabon img {
-    min-width: 100px;
-    width: 10%;
-  }
-}
-.catalog .jabon .price::after {
-  content: "€";
-}
-@media (max-width: 600px) {
-  .catalog .jabon {
-    width: 10%;
-    min-width: 170px;
-  }
 }
 @media (max-width: 1024px) {
   .catalog {
@@ -276,15 +333,18 @@
   font-family: "Exo 2", sans-serif;
 }
 .registro-container .registro form div input {
-  width: 90%;
+  width: 95%;
   border: 2px solid #263740;
   border-radius: 4px;
   color: #263740;
 }
-.registro-container .registro form div input:required::after {
+.registro-container .registro form div input:required + span::after {
   font-family: "Exo 2", sans-serif;
   color: red;
   content: "*";
+}
+.registro-container .registro form div input:invalid {
+  border: 2px solid red;
 }
 .registro-container .registro button {
   background-color: #263740;
@@ -312,6 +372,7 @@
 
 body {
   margin: 0;
+  height: 100%;
 }
 
 .layout-grid {

@@ -1,0 +1,33 @@
+.jabon {
+    min-width: 300px;
+    width: 60%;
+    height: 236px;
+    background-color: $secondary-bg-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 20px;
+    font-family: $primary-font-family;
+    padding: 5px;
+    text-align: center;
+    box-shadow: $primary-box-shadow;
+    & img {
+        width: 150px;
+        height: 150px;
+        border-radius: 20px;
+        @media(max-width: 600px){
+            min-width: 100px;
+            width: 10%;
+        }
+    }
+    & .price {
+        &::after {
+            content: "€";
+        }
+    }
+    @media(max-width: 600px){
+        width: 10%;
+        min-width: 170px;
+    }
+}

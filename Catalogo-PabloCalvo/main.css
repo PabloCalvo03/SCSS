@@ -23,7 +23,7 @@
 }
 @media (min-width: 800px) {
   .header-container .header-container-up .hamburger-menu {
-    display: none !important;
+    display: none;
   }
 }
 .header-container .header-container-up .image-logo {
@@ -65,15 +65,9 @@
   color: white;
   border-bottom: 2px solid white;
 }
-.header-container .header-container-up .header-options a .shopping-cart, .header-container .header-container-up .header-options a .finder {
+.header-container .header-container-up .header-options a img {
   width: 22px;
   height: 22px;
-}
-.header-container .header-container-up .header-options a .shopping-cart:hover, .header-container .header-container-up .header-options a .finder:hover {
-  background-color: blue;
-}
-.header-container .header-container-up .header-options:hover {
-  background-color: blue;
 }
 .header-container .header-container-down {
   display: flex;
@@ -81,7 +75,7 @@
   box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
   height: 25%;
   overflow: hidden;
-  z-index: 1 !important;
+  z-index: 1;
 }
 .header-container .header-container-down .scrolling-text-container {
   font-family: "Exo 2", sans-serif;
@@ -143,7 +137,7 @@
 }
 
 .main-content-container {
-  background-color: gray;
+  background-color: grey;
   width: 100%;
   height: 100%;
   grid-column-start: 2;
@@ -151,78 +145,6 @@
   grid-row-start: 2;
   grid-row-end: 2;
   box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
-}
-.main-content-container h1 {
-  text-align: center;
-  background-color: white;
-  color: rgb(93, 93, 93);
-  font-family: "Exo 2", sans-serif;
-  box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
-}
-.main-content-container .main-content-grid {
-  display: grid;
-  justify-items: center;
-  align-content: center;
-  row-gap: 20px;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-.main-content-container .main-content-grid .jabon {
-  min-width: 300px;
-  width: 60%;
-  height: 236px;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  border-radius: 20px;
-  font-family: "Exo 2", sans-serif;
-  padding: 5px;
-  box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
-}
-.main-content-container .main-content-grid .jabon button {
-  background-color: #263740;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-family: "Exo 2", sans-serif;
-  cursor: pointer;
-  font-size: 16px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s;
-  border: 3px solid #263740;
-}
-.main-content-container .main-content-grid .jabon button:active {
-  color: #263740;
-  background-color: white;
-}
-.main-content-container .main-content-grid .jabon img {
-  width: 150px;
-  height: 150px;
-  border-radius: 20px;
-}
-@media (max-width: 600px) {
-  .main-content-container .main-content-grid .jabon img {
-    min-width: 100px;
-    width: 10%;
-  }
-}
-.main-content-container .main-content-grid .jabon .price::after {
-  content: "€";
-}
-@media (max-width: 600px) {
-  .main-content-container .main-content-grid .jabon {
-    width: 10%;
-    min-width: 170px;
-  }
-}
-@media (max-width: 1024px) {
-  .main-content-container .main-content-grid {
-    grid-template-columns: 1fr 1fr; /* 2 columnas en pantallas menores a 1024px */
-  }
 }
 @media (max-width: 600px) {
   .main-content-container {
@@ -304,8 +226,6 @@
   font-size: 16px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s;
   border: 3px solid #263740;
 }
 .catalog .jabon button:active {
@@ -336,6 +256,58 @@
   .catalog {
     grid-template-columns: 1fr 1fr; /* 2 columnas en pantallas menores a 1024px */
   }
+}
+
+.registro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.registro-container .registro {
+  padding: 11px;
+  width: 500px;
+  height: 450px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
+}
+.registro-container .registro form div label {
+  font-family: "Exo 2", sans-serif;
+}
+.registro-container .registro form div input {
+  width: 90%;
+  border: 2px solid #263740;
+  border-radius: 4px;
+  color: #263740;
+}
+.registro-container .registro form div input:required::after {
+  font-family: "Exo 2", sans-serif;
+  color: red;
+  content: "*";
+}
+.registro-container .registro button {
+  background-color: #263740;
+  width: 100%;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Exo 2", sans-serif;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border: 3px solid #263740;
+}
+.registro-container .registro button:active {
+  color: #263740;
+  background-color: white;
+}
+.registro-container .registro h1 {
+  text-align: center;
+  font-family: "Exo 2", sans-serif;
+  color: rgb(93, 93, 93);
 }
 
 body {

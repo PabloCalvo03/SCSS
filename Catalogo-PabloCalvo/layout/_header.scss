@@ -14,7 +14,7 @@
         height: 75%;
         justify-content: space-between;
         align-items: center;
-        box-shadow: 1px 1px 28px -10px rgba(0,0,0,0.82);
+        box-shadow: $primary-box-shadow;
         @media (max-width: 800px) {
             & .navigation {
                 display: none !important; // Añado el !important porque sino no se sobreescribe el display flex que tiene puesto 
@@ -22,7 +22,7 @@
         }
         @media (min-width: 800px) {
             & .hamburger-menu {
-                display: none !important; // Igual que el !important anterior
+                display: none; 
             }
         }
         & .image-logo {
@@ -39,7 +39,7 @@
             & a {
                 text-transform: uppercase;
                 text-decoration: none;
-                color: $link-color;
+                color: $secondary-text-color;
                 font-family: $primary-font-family;
                 font-weight: 200;
                 font-size: $nav-font-size;
@@ -62,29 +62,23 @@
                     color: white;
                     border-bottom: 2px solid white;
                 }
-                & .shopping-cart, .finder {
+                & img {
                     width: $icon-size;
                     height: $icon-size;
-                    &:hover{
-                        background-color: blue;
-                    }
                 }
-            }
-            &:hover{
-                background-color: blue;
             }
         }
     }
     & .header-container-down {
         display: flex;
         align-items: center;
-        box-shadow: 1px 1px 28px -10px rgba(0,0,0,0.82);
+        box-shadow: $primary-box-shadow;
         height: 25%;
         overflow: hidden;
-        z-index: 1!important;
+        z-index: 1;
         & .scrolling-text-container {
             font-family: $primary-font-family;
-            color: $text-color;
+            color: $primary-text-color;
             font-weight: 200;
             white-space: nowrap;
             animation: scrollLeftRight 60s linear infinite;

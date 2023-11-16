@@ -11,33 +11,33 @@
     grid-row-end: 3;
     box-shadow: $primary-box-shadow;
     justify-content: space-around;
-    & .footer-cliente {
+    .footer-cliente {
         font-family: $primary-font-family;
         padding: 10px;
         text-align: center;
         color: white;
-        & a{
+        a{
             color: white;
             text-decoration: none;
         }
     }
-    & .footer-company {
+    .footer-company {
         font-family: $primary-font-family;
         color: white;
         padding: 10px;
         text-align: center;
-        & a{
+        a{
             color: white;
             text-decoration: none;
         }
 
     }
-    & .footer-social-media {
+    .footer-social-media {
         font-family: $primary-font-family;
         color: white;
         padding: 10px;
         text-align: center;
-        & img{
+        img{
             width: 30px;
             height: 30px;
         }

@@ -13,14 +13,26 @@ body{
     height: 100%;
 }
 
+body.no-sidebar {
+    .sidebar-container {
+      display: none;
+    }
+
+    .main-content-container{
+        grid-column-start: 1;
+    }
+}
+
 .layout-grid {
     display: grid;
     height: 100vh;
 
     grid-template-columns: 230px 1fr;
     grid-template-rows: 105px 1fr 150px;
+
     @media(max-width: 600px){
         grid-template-rows: 105px 1fr 200px;
     }
+
 }
 

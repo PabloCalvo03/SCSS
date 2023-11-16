@@ -7,6 +7,7 @@
   grid-row-start: 1;
   grid-row-end: 2;
   justify-content: space-between;
+  z-index: 4;
 }
 .header-container .header-container-up {
   display: flex;
@@ -136,7 +137,7 @@
 }
 
 .main-content-container {
-  background-color: grey;
+  background-color: white;
   width: 100%;
   height: 100%;
   grid-column-start: 2;
@@ -159,6 +160,8 @@
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: 3;
+  box-shadow: 1px 1px 28px -10px rgba(0, 0, 0, 0.82);
+  z-index: 3;
 }
 .sidebar-container .sidebar-categorys-and-filters {
   display: flex;
@@ -198,7 +201,29 @@
   text-decoration: none;
   border: 3px solid #263740;
 }
+.button-catalogo:hover {
+  background-color: #1f2528;
+}
 .button-catalogo:active {
+  color: #263740;
+  background-color: white;
+}
+
+.button-register {
+  background-color: #263740;
+  width: 100%;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Exo 2", sans-serif;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border: 3px solid #263740;
+}
+.button-register:active {
   color: #263740;
   background-color: white;
 }
@@ -288,7 +313,29 @@
   text-decoration: none;
   border: 3px solid #263740;
 }
+.button-catalogo:hover {
+  background-color: #1f2528;
+}
 .button-catalogo:active {
+  color: #263740;
+  background-color: white;
+}
+
+.button-register {
+  background-color: #263740;
+  width: 100%;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Exo 2", sans-serif;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border: 3px solid #263740;
+}
+.button-register:active {
   color: #263740;
   background-color: white;
 }
@@ -323,7 +370,7 @@
 }
 .registro-container .registro {
   padding: 11px;
-  width: 500px;
+  width: 70%;
   height: 450px;
   background-color: white;
   border-radius: 10px;
@@ -331,6 +378,8 @@
 }
 .registro-container .registro form div label {
   font-family: "Exo 2", sans-serif;
+  display: block;
+  width: 100%;
 }
 .registro-container .registro form div input {
   width: 95%;
@@ -338,7 +387,7 @@
   border-radius: 4px;
   color: #263740;
 }
-.registro-container .registro form div input:required + span::after {
+.registro-container .registro form div input:required:invalid + span::after {
   font-family: "Exo 2", sans-serif;
   color: red;
   content: "*";
@@ -346,23 +395,11 @@
 .registro-container .registro form div input:invalid {
   border: 2px solid red;
 }
-.registro-container .registro button {
-  background-color: #263740;
-  width: 100%;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-family: "Exo 2", sans-serif;
-  cursor: pointer;
-  font-size: 16px;
-  text-align: center;
-  text-decoration: none;
-  border: 3px solid #263740;
+.registro-container .registro form div input:valid {
+  border: 2px solid rgb(64, 255, 0);
 }
-.registro-container .registro button:active {
-  color: #263740;
-  background-color: white;
+.registro-container .registro form div input:focus {
+  outline: none;
 }
 .registro-container .registro h1 {
   text-align: center;
@@ -373,6 +410,13 @@
 body {
   margin: 0;
   height: 100%;
+}
+
+body.no-sidebar .sidebar-container {
+  display: none;
+}
+body.no-sidebar .main-content-container {
+  grid-column-start: 1;
 }
 
 .layout-grid {

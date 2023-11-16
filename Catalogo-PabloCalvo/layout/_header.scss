@@ -8,7 +8,8 @@
     grid-row-start: 1;
     grid-row-end: 2;
     justify-content: space-between;
-    & .header-container-up {
+    z-index: 4;
+    .header-container-up {
         display: flex;
         background-color: $primary-bg-color;
         height: 75%;
@@ -16,27 +17,27 @@
         align-items: center;
         box-shadow: $primary-box-shadow;
         @media (max-width: 800px) {
-            & .navigation {
+            .navigation {
                 display: none !important; // Añado el !important porque sino no se sobreescribe el display flex que tiene puesto 
             }
         }
         @media (min-width: 800px) {
-            & .hamburger-menu {
+            .hamburger-menu {
                 display: none; 
             }
         }
-        & .image-logo {
+        .image-logo {
             width: $logo-size;
             height: $logo-size;
-            padding: $spacing;
+            padding: 10px;
         }
-        & .navigation {
+        .navigation {
             display: flex;
             justify-content: center;
             gap: $nav-gap;
             height: 100%;
             align-items: center;
-            & a {
+            a {
                 text-transform: uppercase;
                 text-decoration: none;
                 color: $secondary-text-color;
@@ -44,38 +45,38 @@
                 font-weight: 200;
                 font-size: $nav-font-size;
                 &:hover {
-                    border-top: 3px solid $link-hover-color;
-                    border-bottom: 3px solid $link-hover-color;
+                    border-top: 3px solid $link-border-hover-color;
+                    border-bottom: 3px solid $link-border-hover-color;
                 }
             }
         }
-        & .header-options {
+        .header-options {
             display: flex;
             gap: $options-gap;
             padding: $link-padding;
             align-content: center;
-            & a {
+            a {
                 height: $link-height;
                 text-decoration: none;
-                & .language-selector {
+                .language-selector {
                     font-family: $primary-font-family;
                     color: white;
                     border-bottom: 2px solid white;
                 }
-                & img {
+                img {
                     width: $icon-size;
                     height: $icon-size;
                 }
             }
         }
     }
-    & .header-container-down {
+    .header-container-down {
         display: flex;
         align-items: center;
         box-shadow: $primary-box-shadow;
         height: 25%;
         overflow: hidden;
-        & .scrolling-text-container {
+        .scrolling-text-container {
             font-family: $primary-font-family;
             color: $primary-text-color;
             font-weight: 200;
